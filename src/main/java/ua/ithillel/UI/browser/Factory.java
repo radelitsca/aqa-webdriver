@@ -20,7 +20,7 @@ public class Factory {
         switch (browser) {
             case CHROME:
                 return getChromeDriver();
-            case FIREFOX:
+            case SAFARI:
                 return getSafariDriver();
             default:
                 throw new IllegalArgumentException("Such browser is not implemented");

@@ -16,6 +16,7 @@ public class Factory {
         return driver;
     }
 
+
     private static WebDriver getDriver(Browsers browser) {
         switch (browser) {
             case CHROME:

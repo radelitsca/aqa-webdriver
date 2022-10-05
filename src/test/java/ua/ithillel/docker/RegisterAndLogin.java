@@ -3,13 +3,13 @@ package ua.ithillel.docker;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import ua.ithillel.UI.browser.Factory;
+import ua.ithillel.UI.utils.ConfigProvider;
 
 import java.time.Duration;
 
@@ -22,12 +22,12 @@ public class RegisterAndLogin {
     @BeforeTest
     public void BeforeTest() {
         driver = Factory.getDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @Test
     public void RegisterTest() {
-        driver.navigate().to("http://192.168.64.3");
+        driver.navigate().to(ConfigProvider.BASE_URL);
         driver.findElement(By.id("register")).findElement(By.xpath("./child::*")).click();
 
         String username = getString();

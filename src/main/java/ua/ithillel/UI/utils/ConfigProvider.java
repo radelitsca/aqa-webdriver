@@ -7,7 +7,7 @@ public final class ConfigProvider {
     public static final String CONFIG_PATH = "config.properties";
     private static final Properties prop = initProperties();
     public static final String BROWSER = prop.getProperty("browser");
-
+    public static final String BASE_URL = prop.getProperty("base.url");
     private ConfigProvider() {
 
     }

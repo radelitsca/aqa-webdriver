@@ -6,6 +6,7 @@
     <test name="UI test">
         <classes>
             <class name="ua.ithillel.docker.RegisterUser"/>
+
         </classes>
 
     </test>

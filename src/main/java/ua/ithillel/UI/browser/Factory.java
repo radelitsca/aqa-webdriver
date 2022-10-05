@@ -31,6 +31,7 @@ public class Factory {
         if (driver == null) {
             WebDriverManager.safaridriver().setup();
             driver = new SafariDriver();
+            driver.manage().window().maximize();
         }
         return driver;
     }

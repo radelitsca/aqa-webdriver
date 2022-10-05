@@ -29,7 +29,7 @@ public class BaseUITests {
     public void test() {
         driver.navigate().to("https://www.google.com");
         driver.findElement(By.name("q")).sendKeys("webdriver");
-        driver.findElements(By.name("btnK")).get(0).click();
+        driver.findElements(By.name("btnK")).get(1).click();
         Assert.assertEquals(driver.getTitle(), "webdriver - Пошук Google");
     }
 

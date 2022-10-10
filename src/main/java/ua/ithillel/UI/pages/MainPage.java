@@ -2,6 +2,7 @@ package ua.ithillel.UI.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import ua.ithillel.UI.model.User;
 import ua.ithillel.UI.utils.ConfigProvider;
 import ua.ithillel.UI.utils.WaitUtils;
@@ -47,10 +48,12 @@ public class MainPage extends Page {
     }
 
     public boolean isUserLoggedIn() {
-        return driver.findElements(logInMessage).size() > 0;
+        WaitUtils.waitUntilElementIsVisible(driver, logoutlink);
+        return driver.findElements(logoutlink).size()>0;
     }
 
     public LoginForm logout() {
+        WaitUtils.waitUntilElementIsVisible(driver, logoutlink);
         driver.findElement(logoutlink).click();
         return new LoginForm();
 

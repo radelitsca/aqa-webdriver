@@ -5,7 +5,7 @@
 
     <test name="UI test">
         <classes>
-            <class name="ua.ithillel.docker.RegisterUser"/>
+            <class name="ua.ithillel.pageObject.RegisterTest"/>
 
         </classes>
 

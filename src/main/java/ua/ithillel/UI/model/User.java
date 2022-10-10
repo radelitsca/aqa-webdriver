@@ -1,5 +1,7 @@
 package ua.ithillel.UI.model;
 
+import com.github.javafaker.Faker;
+
 public class User {
     private String userName;
     private String firstName;
@@ -76,6 +78,11 @@ public class User {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+    public static User randomUser() {
+        Faker faker = new Faker();
+        return new User(faker.name().username(), faker.name().firstName(), faker.name().lastName(), faker.internet().emailAddress(), faker.internet().password());
     }
 }
 

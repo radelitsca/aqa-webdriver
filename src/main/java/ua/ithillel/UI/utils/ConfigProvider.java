@@ -8,6 +8,7 @@ public final class ConfigProvider {
     private static final Properties prop = initProperties();
     public static final String BROWSER = prop.getProperty("browser");
     public static final String BASE_URL = prop.getProperty("base.url");
+    public static final int IMPLICITLY_WAIT = Integer.parseInt(prop.getProperty("implicitly.wait"));
     private ConfigProvider() {
 
     }

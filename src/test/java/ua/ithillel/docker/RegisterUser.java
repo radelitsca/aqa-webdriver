@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import ua.ithillel.UI.browser.WebDriverProviderLazy;
 import ua.ithillel.UI.model.User;
 import ua.ithillel.UI.utils.ConfigProvider;
-import ua.ithillel.UI.wrapper.Button;
 
 
 public class RegisterUser {
@@ -41,7 +40,7 @@ public class RegisterUser {
         driver.findElement(By.name("last-name")).sendKeys(user.getLastName());
         driver.findElement(By.name("email")).sendKeys(user.getEmail());
         driver.findElements(By.name("password")).get(1).sendKeys(user.getPassword());
-        Button.clickButton(driver.findElements(By.className("btn")).get(2));
+        driver.findElements(By.className("btn")).get(2).click();
 
         Assert.assertEquals(driver.findElement(By.id("registration-message")).getText(), "Registration and login successful.");
     }

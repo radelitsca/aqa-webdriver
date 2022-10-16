@@ -1,7 +1,6 @@
 package work_with_file;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 public class WorkWithFile {

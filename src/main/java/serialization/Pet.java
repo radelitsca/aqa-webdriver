@@ -1,6 +1,8 @@
 package serialization;
 
-public class Pet {
+import java.io.Serializable;
+
+public class Pet implements Serializable {
     private String name;
 
     public Pet(String name) {

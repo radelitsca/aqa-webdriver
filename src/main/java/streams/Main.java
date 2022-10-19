@@ -8,5 +8,7 @@ final static String PATH = "src/test/resources/user.dat";
 
         UserDataReader reader = new UserDataReader();
         reader.readUserData(PATH);
+
+
     }
 }
